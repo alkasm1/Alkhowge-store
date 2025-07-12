@@ -15,15 +15,20 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
+// ✳️ غيّر هذا إلى بريدك الحقيقي المستخدم على Gmail
+const allowedEmail = "admin@gmail.com";
+
 document.getElementById("loginBtn").addEventListener("click", () => {
   signInWithPopup(auth, provider)
     .then((result) => {
       const user = result.user;
-      // ✅ هنا ممكن تتحقق من البريد إذا أردت تحديد مسؤول واحد فقط
-      // ثم تحوّل المستخدم إلى لوحة التحكم
-      window.location.href = "admin.html";
+      if (user.email === allowedEmail) {
+        window.location.href = "admin.html";
+      } else {
+        alert("❌ هذا البريد غير مصرح له بالدخول إلى لوحة التحكم.");
+      }
     })
     .catch((error) => {
-      alert("فشل تسجيل الدخول: " + error.message);
+      alert("حدث خطأ في تسجيل الدخول: " + error.message);
     });
 });

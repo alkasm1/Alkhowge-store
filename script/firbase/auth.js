@@ -15,8 +15,8 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-// ✳️ غيّر هذا إلى بريدك الحقيقي المستخدم على Gmail
-const allowedEmail = "admin@gmail.com";
+// ✅ السماح فقط لهذا البريد بالدخول إلى لوحة التحكم
+const allowedEmail = "shamwebs1@gmail.com";
 
 document.getElementById("loginBtn").addEventListener("click", () => {
   signInWithPopup(auth, provider)

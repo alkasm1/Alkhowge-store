@@ -2,9 +2,10 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8" />
-  <title>متجر القهوجي | منتجات فاخرة لعشاق القهوة</title>
+  <title>متجر القهوجي | أجهزة لابتوب وطابعات وراوترات</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       background-color: #000;
@@ -13,31 +14,83 @@
       margin: 0;
       padding: 0;
     }
-    header, main, footer {
-      padding: 2rem;
+    header {
       text-align: center;
+      padding: 2rem;
     }
-    a {
-      color: #d4af37;
-      text-decoration: none;
+    header img {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .product {
+      background-color: #111;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+    .product h3 {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+    .product p {
+      font-size: 0.9rem;
+      color: #ccc;
     }
     footer {
+      text-align: center;
+      padding: 2rem;
       font-size: 14px;
-      margin-top: 3rem;
+    }
+    footer a {
+      color: #d4af37;
+      margin: 0 5px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="logo.png" alt="شعار المتجر" />
     <h1>متجر القهوجي</h1>
-    <p>تشكيلة منتقاة من المنتجات اليدوية لعشاق القهوة</p>
+    <p><i class="fas fa-laptop"></i> لابتوبات | <i class="fas fa-print"></i> طابعات | <i class="fas fa-wifi"></i> راوترات</p>
   </header>
 
-  <main>
-    <p>تصفح مجموعتنا، وتواصل معنا للطلبات الخاصة.</p>
-    <a href="https://wa.me/963957939599" style="display: inline-block; padding: 1rem 2rem; background-color: #6e4027; color: #fff; border-radius: 6px;">تواصل عبر واتساب</a>
-  </main>
+  <section class="products">
+    <div class="product">
+      <img src="images/laptop1.jpg" alt="لابتوب HP" />
+      <h3>لابتوب HP EliteBook</h3>
+      <p>السعر: 1,200 ريال</p>
+    </div>
+    <div class="product">
+      <img src="images/printer1.jpg" alt="طابعة Canon" />
+      <h3>طابعة Canon LBP6030</h3>
+      <p>السعر: 450 ريال</p>
+    </div>
+    <div class="product">
+      <img src="images/router1.jpg" alt="راوتر TP-Link" />
+      <h3>راوتر TP-Link AC1200</h3>
+      <p>السعر: 220 ريال</p>
+    </div>
+  </section>
 
   <footer>
     <p>

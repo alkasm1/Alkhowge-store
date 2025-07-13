@@ -1,50 +1,49 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>القهوجي للتقنية والبرمجيات</title>
-  <meta name="description" content="متجر القهوجي | أحدث الأجهزة التقنية والبرمجيات الأصلية">
-  <meta name="google-site-verification" content="LqutkWwRa5gkXHD-RD7anHC7KKemGS-jtyuTm1qre-k" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <script type="module" src="scripts/firebase.js"></script>
+  <meta charset="UTF-8" />
+  <title>متجر القهوجي | منتجات فاخرة لعشاق القهوة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, main, footer {
+      padding: 2rem;
+      text-align: center;
+    }
+    a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+    footer {
+      font-size: 14px;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="background-pulse"></div>
-
-  <div class="typing-banner">
-    <h1 class="typing-text">مرحبًا بك في متجر القهوجي – التقنية تبدأ من هنا 💻📡</h1>
-  </div>
-
   <header>
-    <img src="images/logo.png" alt="شعار القهوجي" class="logo-image">
-    <nav>
-      <a href="#products">المنتجات</a>
-      <a href="#contact">تواصل معنا</a>
-    </nav>
+    <h1>متجر القهوجي</h1>
+    <p>تشكيلة منتقاة من المنتجات اليدوية لعشاق القهوة</p>
   </header>
 
-  <section id="products" class="section fade-in">
-    <h2>المنتجات المتوفرة</h2>
-    <div id="product-grid" class="product-grid">
-      <!-- سيتم تعبئته تلقائيًا من Firebase -->
-    </div>
-  </section>
-
-  <section id="contact" class="section fade-in">
-    <h2>تواصل معنا</h2>
-    <p>📞 <strong>00963957939599</strong> | 📧 <strong>info@alqahwaji.tech</strong></p>
-    <p>تابعنا على منصات التواصل لمعرفة آخر العروض 💥</p>
-  </section>
-
-  <a class="whatsapp" href="https://wa.me/963957939599" target="_blank" title="تواصل عبر واتساب">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+  <main>
+    <p>تصفح مجموعتنا، وتواصل معنا للطلبات الخاصة.</p>
+    <a href="https://wa.me/963957939599" style="display: inline-block; padding: 1rem 2rem; background-color: #6e4027; color: #fff; border-radius: 6px;">تواصل عبر واتساب</a>
+  </main>
 
   <footer>
-    &copy; 2025 القهوجي – جميع الحقوق محفوظة
+    <p>
+      <a href="privacy.html">سياسة الخصوصية</a> |
+      <a href="terms.html">الشروط والأحكام</a>
+    </p>
   </footer>
 
 </body>

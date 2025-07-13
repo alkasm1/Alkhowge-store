@@ -22,9 +22,23 @@
       width: 120px;
       margin-bottom: 1rem;
     }
+    .welcome-text {
+      color: #d4af37;
+      font-size: 20px;
+      animation: pulse 2.5s infinite alternate;
+      margin-bottom: 1rem;
+    }
+    @keyframes pulse {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
     h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
+    }
+    .categories {
+      font-size: 16px;
+      margin-bottom: 1rem;
     }
     .products {
       display: flex;
@@ -54,6 +68,17 @@
       font-size: 0.9rem;
       color: #ccc;
     }
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25d366;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      margin: 2rem auto;
+      text-align: center;
+      font-size: 15px;
+      text-decoration: none;
+    }
     footer {
       text-align: center;
       padding: 2rem;
@@ -69,9 +94,14 @@
 <body>
 
   <header>
+    <p class="welcome-text">مرحبًا بكم في متجر القهوجي — خبراء التقنية في متناولك</p>
     <img src="logo.png" alt="شعار المتجر" />
     <h1>متجر القهوجي</h1>
-    <p><i class="fas fa-laptop"></i> لابتوبات | <i class="fas fa-print"></i> طابعات | <i class="fas fa-wifi"></i> راوترات</p>
+    <p class="categories">
+      <i class="fas fa-laptop"></i> لابتوبات |
+      <i class="fas fa-print"></i> طابعات |
+      <i class="fas fa-wifi"></i> راوترات
+    </p>
   </header>
 
   <section class="products">
@@ -91,6 +121,12 @@
       <p>السعر: 220 ريال</p>
     </div>
   </section>
+
+  <div style="text-align: center;">
+    <a class="whatsapp-button" href="https://wa.me/963957939599">
+      <i class="fab fa-whatsapp"></i> تواصل معنا عبر واتساب
+    </a>
+  </div>
 
   <footer>
     <p>

@@ -14,6 +14,33 @@
       margin: 0;
       padding: 0;
     }
+
+    /* شريط التنقّل */
+    .navbar {
+      background-color: #111;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    .navbar ul li a {
+      color: #d4af37;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    .navbar ul li a:hover {
+      color: #fff;
+    }
+
     header {
       text-align: center;
       padding: 2rem;
@@ -89,9 +116,39 @@
       margin: 0 5px;
       text-decoration: none;
     }
+
+    /* زر لوحة التحكم + زر تسجيل الدخول */
+    .admin-btn, .login-btn {
+      display: inline-block;
+      background-color: #444;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 10px;
+      font-size: 15px;
+      transition: 0.3s;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .admin-btn:hover, .login-btn:hover {
+      background-color: #666;
+    }
   </style>
 </head>
 <body>
+
+  <!-- شريط التنقّل -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="products.html">المنتجات</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+      <li><a href="login.html">تسجيل الدخول</a></li>
+      <li><a href="admin.html">لوحة التحكم</a></li>
+    </ul>
+  </nav>
 
   <header>
     <p class="welcome-text">مرحبًا بكم في متجر القهوجي — خبراء التقنية في متناولك</p>
@@ -102,6 +159,10 @@
       <i class="fas fa-print"></i> طابعات |
       <i class="fas fa-wifi"></i> راوترات
     </p>
+
+    <!-- زر لوحة التحكم + زر تسجيل الدخول -->
+    <a class="login-btn" href="login.html">تسجيل الدخول</a>
+    <a class="admin-btn" href="admin.html">لوحة التحكم</a>
   </header>
 
   <section class="products">

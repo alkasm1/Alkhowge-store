@@ -1,4 +1,33 @@
 <!DOCTYPE html>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBcBC17rj9rzOe5kgDpiYQbLY64Xqptd8U",
+    authDomain: "alkhowge.firebaseapp.com",
+    projectId: "alkhowge",
+    storageBucket: "alkhowge.appspot.com",
+    messagingSenderId: "793921262814",
+    appId: "1:793921262814:web:4bb4ba88a1ecddefb15e4f",
+    measurementId: "G-NE9G3HK7FH"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  const allowedEmail = "shamwebs1@gmail.com";
+
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      window.location.href = "login.html";
+    } else if (user.email !== allowedEmail) {
+      alert("❌ غير مصرح لك بالدخول إلى لوحة التحكم");
+      auth.signOut();
+      window.location.href = "login.html";
+    }
+  });
+</script>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
